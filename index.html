@@ -8,36 +8,46 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body class=" min-h-screen justify-center items-center">
+<body  class=" min-h-screen justify-center items-center">
+    <div id="modal" class=" group invisible absolute bottom-50 mx-auto w-full h-[100vh] flex top-50 rounded text-white w-full backdrop-blur z-40 items-center justify-center target:visible target:opacity-100">
+        <div class="rounded flex flex-col space-y-5 bg-gradient-to-br from-[#fd5c61] via-[#ea6591] to-[#df6aac] p-8 h-32 flex items-center text-center">
+            <h1>Your response has been collected!</h1>
+            <a href="/"><button class="bg-white text-[#ea6591] px-4 py-1 hover:scale-105 duration-500 transition-all ease-in-out rounded">Okay</button></a>
+        </div>
+    </div>
     <div class="bg-[#141528] z-0 h-[50vh] w-full">
     </div>
-    <div class="relative bottom-40 space-y-12 text-white z-10 flex flex-col mx-auto justify-center items-center">
-        <div class="flex w-3/4  flex-row  justify-between">
+    
+    <div class="relative bottom-60 md:bottom-40 space-y-12 text-white z-10 flex flex-col mx-auto justify-center items-center">
+        <div class="flex w-3/4  flex-col md:flex-row space-y-4 md:space-y-0 justify-between">
             <div class="flex flex-col text-center">
-                <h1 class="font-bold text-md lg:text-xl">1000+</h1>
-                <p class="text-xs lg:text-sm">UI Components</p>
+                <h1 class="font-bold text-xl lg:text-xl">1000+</h1>
+                <p class="text-xl lg:text-sm">UI Components</p>
             </div> 
             <div class="flex flex-col text-center">
-                <h1 class="font-bold text-md lg:text-xl">5</h1>
-                <p class="text-xs lg:text-sm">Software Type Files</p>
+                <h1 class="font-bold text-xl lg:text-xl">5</h1>
+                <p class="text-xl lg:text-sm">Software Type Files</p>
             </div> 
             <div class="flex flex-col text-center">
-                <h1 class="font-bold text-md lg:text-xl">5</h1>
-                <p class="text-xs lg:text-sm">Weekly Uploads</p>
+                <h1 class="font-bold text-xl lg:text-xl">5</h1>
+                <p class="text-xl lg:text-sm">Weekly Uploads</p>
             </div> 
         </div>
-        <div class="bg-gradient-to-br rounded space-y-2 justify-center items-center from-[#fd5c61] via-[#ea6591] to-[#df6aac] flex flex-col py-8  md:px-24 w-3/4">
+        <div class="bg-gradient-to-br rounded space-y-2 justify-center items-center from-[#fd5c61] via-[#ea6591] to-[#df6aac] flex flex-col py-8 px-4 md:px-24 w-3/4">
             <h1 class="font-bold text-xl md:text-2xl">Join Our Newsletter</h1>
             <p>Weekly Free UI resources to your inbox</p>
-            <div class="flex flex-row">
-                <input type="email" placeholder="Enter Your E-mail" class="w-full rounded text-white p-2 bg-transparent border border-2">
-                <button class="px-4 py-2 bg-white relative duration-500 hover:scale-105 hover:rounded  transition-all ease-in-out right-2 text-[#fd5c61] focus:border-white">Submit</button>
+            <div class="flex flex-row focus:scale-105 w-full items-center justify-center">
+                <form class="flex flex-row shadow w-3/4">
+                    <input  type="email" placeholder="Your Email" class="w-full appearance-none  rounded text-white p-2 bg-transparent border border-1 .placeholder-white::placeholder placeholder-opacity-50 placeholder-gray-300 focus:bg-transparent focus:outline-none">
+                    <a href="#modal" class="px-4 py-2 rounded-r bg-white relative duration-500 hover:scale-105 hover:rounded  transition-all ease-in-out right-2 text-[#fd5c61] focus:border-white>
+                        <button onclick="" type="submit" ">Submit</button>
+                    </a>
+                </form>
             </div>
         </div>
     </div>
     <div class="bg-white z-0 h-[50vh] w-full">
     </div>
 
-    
 </body>
 </html>

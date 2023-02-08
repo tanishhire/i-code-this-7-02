@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@9.0.1/dist/cjs/index.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body  class=" min-h-screen justify-center items-center">
+<body  class=" min-h-screen justify-center items-center overflow-hidden">
     <div id="modal" class=" group invisible absolute bottom-50 mx-auto w-full h-[100vh] flex top-50 rounded text-white w-full backdrop-blur z-40 items-center justify-center target:visible target:opacity-100">
         <div class="rounded flex flex-col space-y-5 bg-gradient-to-br from-[#fd5c61] via-[#ea6591] to-[#df6aac] p-8 h-32 flex items-center text-center">
             <h1>Your response has been collected!</h1>
@@ -18,23 +19,23 @@
     <div class="bg-[#141528] z-0 h-[50vh] w-full">
     </div>
     
-    <div class="relative bottom-60 md:bottom-40 space-y-12 text-white z-10 flex flex-col mx-auto justify-center items-center">
+    <div class="relative bottom-80 md:bottom-40 space-y-12 text-white z-10 flex flex-col mx-auto justify-center items-center">
         <div class="flex w-3/4  flex-col md:flex-row space-y-4 md:space-y-0 justify-between">
             <div class="flex flex-col text-center">
-                <h1 class="font-bold text-xl lg:text-xl">1000+</h1>
-                <p class="text-xl lg:text-sm">UI Components</p>
+                <h1 class="font-bold text-xl lg:text-2xl  glow-text  bg-clip-text text-transparent bg-gradient-to-r from-[#fd5c61] via-[#ea6591] to-[#df6aac]  whitespace-nowrap numbers">1000+</h1>
+                <p class="text-xl lg:text-xl ">UI Components</p>
             </div> 
             <div class="flex flex-col text-center">
-                <h1 class="font-bold text-xl lg:text-xl">5</h1>
-                <p class="text-xl lg:text-sm">Software Type Files</p>
+                <h1 class="font-bold text-xl lg:text-2xl  glow-text  bg-clip-text text-transparent bg-gradient-to-r from-[#fd5c61] via-[#ea6591] to-[#df6aac]  whitespace-nowrap numbers">5</h1>
+                <p class="text-xl lg:text-xl ">Software Type Files</p>
             </div> 
-            <div class="flex flex-col text-center">
-                <h1 class="font-bold text-xl lg:text-xl">5</h1>
-                <p class="text-xl lg:text-sm">Weekly Uploads</p>
+            <div class="flex flex-col text-center ">
+                <h1 class="font-bold text-xl lg:text-2xl glow-text  bg-clip-text text-transparent bg-gradient-to-r from-[#fd5c61] via-[#ea6591] to-[#df6aac]  whitespace-nowrap numbers">5</h1>
+                <p class="text-xl lg:text-xl ">Weekly Uploads</p>
             </div> 
         </div>
-        <div class="bg-gradient-to-br rounded space-y-2 justify-center items-center from-[#fd5c61] via-[#ea6591] to-[#df6aac] flex flex-col py-8 px-4 md:px-24 w-3/4">
-            <h1 class="font-bold text-xl md:text-2xl">Join Our Newsletter</h1>
+        <div class="box cursor-pointer bg-gradient-to-br rounded-xl shadow shadow-xl shadow-[#B3FFEC] space-y-5 justify-center items-center from-[#fd5c61] via-[#ea6591] to-[#df6aac] flex flex-col py-8  px-4 md:px-24 w-3/4">
+            <h1 class="font-bold text-xl md:text-3xl glow-text  bg-clip-text text-transparent bg-gradient-to-r from-[#E4FFCC] via-[#b7e5f2] to-[#E4FFCC] whitespace-nowrap  ">Join Our Newsletter</h1>
             <p>Weekly Free UI resources to your inbox</p>
             <div class="flex flex-row focus:scale-105 w-full items-center justify-center">
                 <form class="flex flex-row shadow w-3/4">
@@ -50,4 +51,27 @@
     </div>
 
 </body>
+<script>
+    const dropIn = {
+        hidde: {
+           y: "-100vh", 
+           opacity : 0
+        },
+        visible: {
+            y: "0",
+            opacity : 1,
+            transition: {
+                duration: 0.1,
+                type: "spring",
+                damping: 25,
+                stiffness: 500,
+            }
+        },
+        exit: {
+           y: "100vh",
+           opacity: 0,
+        },
+    }
+    
+</script>
 </html>
